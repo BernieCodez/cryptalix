@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptalix - Terms and Conditions</title>
+  <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Themes/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Themes/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Themes/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Themes/images/favicons/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="terms-and-conditions">Terms and Conditions</h1>
+<p>Welcome to The Ultimate Cipher! By using this web app, you agree to the following terms. Please read them carefully.</p>
+<h2 id="use-of-service">1. Use of Service</h2>
+<p>This app allows users to encrypt and decrypt messages securely.<br>
+VIP features are available to users who have obtained access through approved means.</p>
+<p>By using this app, you agree not to encrypt or share content that is inappropriate, offensive, illegal, or violates the rights of others.</p>
+<h2 id="redistribution-of-vip-features">2. Redistribution of VIP Features</h2>
+<p>Redistribution of any VIP code or feature access without explicit permission is strictly prohibited. Violators will be permanently banned from using the app.</p>
+<h2 id="user-responsibility">3. User Responsibility</h2>
+<p>You are solely responsible for the content you encrypt or decrypt using this service.</p>
+<p>The app is provided “as is” without warranties. We are not liable for any misuse, data loss, or unauthorized access.</p>
+<h2 id="prohibited-activities">4. Prohibited Activities</h2>
+<p>Misuse of the service, including attempts to hack, reverse-engineer, or disrupt the app, is prohibited.</p>
+<p>Automated or excessive usage that affects the app’s performance for others is not allowed.</p>
+<h2 id="privacy">5. Privacy</h2>
+<p>We do not store the contents of your encrypted or decrypted messages.</p>
+<h2 id="termination">6. Termination</h2>
+<p>We reserve the right to terminate or restrict access to the app for users who violate these terms.</p>
+<h2 id="changes-to-terms">7. Changes to Terms</h2>
+<p>These terms may be updated occasionally. Continued use of the app after changes indicates your acceptance of the revised terms.</p>
+<p>If you have any questions about these terms, please contact me at <a href="mailto:berniechen2015@gmail.com">berniechen2015@gmail.com</a>.</p>
+<br>
+<label>
+  <input type="checkbox" id="saveCheck" />
+  I have read and accepted the Terms and Conditions
+</label>
+<br>
+<br>
+<button id="back" onclick="window.location.href='index.html'" disabled>Back</button>
+
+</div>
+
+<script>
+const button = document.getElementById('back');
+  // Select the checkbox
+const checkbox = document.getElementById('saveCheck');
+
+
+// Check local storage for existing data and set the checkbox state
+window.addEventListener('DOMContentLoaded', () => {
+    const isChecked = localStorage.getItem('terms') === 'true';
+    checkbox.checked = isChecked;
+    button.disabled =! checkbox.checked;
+
+});
+
+// Add event listener to update local storage when the checkbox state changes
+checkbox.addEventListener('change', () => {
+    localStorage.setItem('terms', checkbox.checked);
+    button.disabled =! checkbox.checked;
+});
+
+
+</script>
+</body>
+
+</html>
